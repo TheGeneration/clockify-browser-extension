@@ -66,18 +66,53 @@
 	justify-content: center;
 	align-items: center;
 	font-size: 14px;
+
 	img,
 	svg {
 		vertical-align: inherit;
 	}
 }
 
+.clockify-button-active,
+.clockify-button-inactive {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 4px;
+	color: #fff;
+	transition: all .2s ease-in-out;
+}
+
 .clockify-button-active {
-	color: #03a9f4;
+	background-color: #f44336;
+
+	&:hover {
+		background-color: #f22112;
+	}
 }
 
 .clockify-button-inactive {
-	color: #444444;
+	background-color: #03a9f4;
+
+	&:hover {
+		background-color: #038fce;
+	}
+}
+
+.clockify-btn-time {
+	width: 62px;
+    text-align: center;
+	display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+
+	&.clockify-btn-time-current {
+		color: #03a9f4;
+	}
+
+	&.clockify-btn-time-other {
+		font-weight: bold;
+		color: #f44336;
+	}
 }
 
 .clockify-input {

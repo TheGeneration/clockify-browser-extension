@@ -73,11 +73,11 @@ function invokeIfFunction(trial) {
 
 const Button = (props) => {
 	const styles = { marginLeft: '5px', float: 'none', position: 'relative' };
-	if (props.active) {
-		styles.color = '#03A9F4';
-	} else {
-		styles.color = props.inactiveButtonColor || '#444444';
-	}
+	// if (props.active) {
+	// 	styles.color = '#03A9F4';
+	// } else {
+	// 	styles.color = props.inactiveButtonColor || '#444444';
+	// }
 	return (
 		<div
 			id="clockifyButtonReact"
