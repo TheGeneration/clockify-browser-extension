@@ -1,7 +1,7 @@
 renderCardButton();
 observeTicketSubjectChanges();
 
-const getBrowser = () => {
+function getBrowser() {
 	if (typeof chrome !== 'undefined') {
 		if (typeof browser !== 'undefined') {
 			return Object.assign(browser, {
@@ -22,14 +22,6 @@ const getBrowser = () => {
 		return createBrowser();
 	}
 };
-
-const observer = new MutationObserver((mutations) => {
-	mutations.forEach((mutation) => {
-		if (mutation.type === 'characterData') {
-			renderCardButton();
-		}
-	});
-});
 
 function renderCardButton() {
 	removeExistingClockifyButton();
